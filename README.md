@@ -1,15 +1,17 @@
-# pkg-name
+# vscode-tmlanguage-snapshot
 
-[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
+Take snapshots of your tmLanguage grammar.
+
+[![NPM version](https://img.shields.io/npm/v/vscode-tmlanguage-snapshot?color=a1b858&label=)](https://www.npmjs.com/package/vscode-tmlanguage-snapshot)
 
 ## 💎 Features
 
 ## 📦 Installation
 
 ```bash
-$ npm install pkg-name
-$ yarn add pkg-name
-$ pnpm add pkg-name
+$ npm install vscode-tmlanguage-snapshot
+$ yarn add vscode-tmlanguage-snapshot
+$ pnpm add vscode-tmlanguage-snapshot
 ```
 
 ## 🚀 Usage

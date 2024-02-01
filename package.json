@@ -1,17 +1,35 @@
 {
-	"name": "pkg-name",
+	"name": "vscode-tmlanguage-snapshot",
 	"version": "0.0.0",
 	"packageManager": "pnpm@8.15.1",
 	"author": "Ray <i@mk1.io> (@so1ve)",
-	"description": "",
-	"keywords": [],
-	"homepage": "https://github.com/so1ve/pkg-name#readme",
+	"description": "Take snapshots of your tmLanguage grammar.",
+	"keywords": [
+		"grammar",
+		"highlighting",
+		"language",
+		"snapshot",
+		"snapshot",
+		"snapshot-test",
+		"snapshot-tester",
+		"snapshot-testing",
+		"snapshot-tests",
+		"snapshots",
+		"syntax",
+		"test",
+		"testing",
+		"textmate",
+		"tmLanguage",
+		"unit",
+		"vscode"
+	],
+	"homepage": "https://github.com/so1ve/vscode-tmlanguage-snapshot#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/so1ve/pkg-name.git"
+		"url": "git+https://github.com/so1ve/vscode-tmlanguage-snapshot.git"
 	},
 	"bugs": {
-		"url": "https://github.com/so1ve/pkg-name/issues"
+		"url": "https://github.com/so1ve/vscode-tmlanguage-snapshot/issues"
 	},
 	"license": "MIT",
 	"sideEffects": false,
@@ -49,6 +67,10 @@
 		"test": "vitest",
 		"typecheck": "tsc --noEmit",
 		"watch": "pkgroll --watch"
+	},
+	"dependencies": {
+		"vscode-oniguruma": "^2.0.1",
+		"vscode-textmate": "^9.0.0"
 	},
 	"devDependencies": {
 		"@antfu/ni": "^0.21.8",
