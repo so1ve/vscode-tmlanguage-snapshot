@@ -62,8 +62,8 @@ export async function createGrammarSnapshot(
 			return { grammar, content };
 		}),
 	);
-	const oniguramaLib = createOniguramaLib();
 
+	const oniguramaLib = createOniguramaLib();
 	const registry = createTextmateRegistry(grammarsWithContent, oniguramaLib);
 
 	async function snapshot(filename: string, content: string) {
