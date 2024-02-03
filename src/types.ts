@@ -1,4 +1,16 @@
+import type { IToken } from "vscode-textmate";
+
 export interface GrammarSnapshotOptions {
+	extraGrammarPaths?: string[];
+}
+
+export interface Language {
+	id: string;
+	extensions?: string[];
+	configuration?: string;
+}
+
+export interface Grammar {
 	path: string;
 	language?: string;
 	scopeName: string;
@@ -7,6 +19,7 @@ export interface GrammarSnapshotOptions {
 	injectTo?: string[];
 }
 
-export interface Grammar {
-	path: string;
+export interface LineWithTokens {
+	line: string;
+	tokens: IToken[];
 }

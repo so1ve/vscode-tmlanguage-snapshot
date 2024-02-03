@@ -1,17 +1,19 @@
-import * as tm from "vscode-textmate";
+import type { IOnigLib, IRawGrammar } from "vscode-textmate";
+import { Registry, parseRawGrammar } from "vscode-textmate";
+
+import type { Grammar } from "./types";
 
 export function createTextmateRegistry(
-	grammars: { grammar: any; content: string }[],
-	onigurumaLib: Promise<tm.IOnigLib>,
+	grammars: { grammar: Grammar; content: string }[],
+	onigLib: Promise<IOnigLib>,
 ) {
-	const grammarMap = new Map<string, tm.IRawGrammar>();
+	const grammarMap = new Map<string, IRawGrammar>();
 	const injectionMap = new Map<string, string[]>();
 
-	for (const g of grammars) {
-		const { grammar, content } = g;
-		const rawGrammar = tm.parseRawGrammar(content, grammar.path);
+	for (const { grammar, content } of grammars) {
+		const rawGrammar = parseRawGrammar(content, grammar.path);
 
-		grammarMap.set(grammar.scope || rawGrammar.scope, rawGrammar);
+		grammarMap.set(grammar.scopeName || rawGrammar.scopeName, rawGrammar);
 
 		if (grammar.injectTo) {
 			for (const injectScope of grammar.injectTo) {
@@ -19,13 +21,13 @@ export function createTextmateRegistry(
 				if (!injections) {
 					injectionMap.set(injectScope, (injections = []));
 				}
-				injections.push(grammar.scope);
+				injections.push(grammar.scopeName);
 			}
 		}
 	}
 
-	return new tm.Registry({
-		onigLib: onigurumaLib,
+	return new Registry({
+		onigLib,
 		async loadGrammar(scope) {
 			if (grammarMap.has(scope)) {
 				return grammarMap.get(scope);
@@ -45,5 +47,5 @@ export function createTextmateRegistry(
 
 			return injections;
 		},
-	} as tm.RegistryOptions);
+	});
 }

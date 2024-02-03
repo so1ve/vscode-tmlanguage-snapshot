@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`vue-language-tools > D:/Workspace/vscode-tmlanguage-snapshot/test/__fixtures__/vue-language-tools/cases/basic.vue 1`] = `
+"><template></template>
+#^ source.vue punctuation.definition.tag.begin.html.vue
+# ^^^^^^^^ source.vue entity.name.tag.template.html.vue
+#         ^ source.vue meta.tag-stuff punctuation.definition.tag.end.html.vue
+#          ^^ source.vue punctuation.definition.tag.begin.html.vue
+#            ^^^^^^^^ source.vue entity.name.tag.template.html.vue
+#                    ^ source.vue punctuation.definition.tag.end.html.vue
+>
+#^ source.vue"
+`;

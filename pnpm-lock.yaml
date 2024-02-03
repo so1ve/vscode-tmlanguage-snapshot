@@ -31,11 +31,14 @@ devDependencies:
   eslint:
     specifier: ^8.51.0
     version: 8.56.0
+  fast-glob:
+    specifier: ^3.3.2
+    version: 3.3.2
   pkgroll:
     specifier: ^2.0.1
     version: 2.0.1(typescript@5.3.3)
   prettier:
-    specifier: ^3.0.3
+    specifier: ^3.2.4
     version: 3.2.4
   tsx:
     specifier: ^3.13.0
