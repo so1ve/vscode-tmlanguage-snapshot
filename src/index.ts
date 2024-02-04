@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { dirname, extname, join } from "node:path";
+import { dirname, extname, isAbsolute, join } from "node:path";
 
 import { createOniguramaLib } from "./onigurama";
 import { renderSnapshotFromLineAndTokens } from "./snapshot";
@@ -23,14 +23,14 @@ export async function createGrammarSnapshot(
 	}
 
 	const packageJson = JSON.parse(await readFile(packageJsonPath, "utf-8"));
-	const packageDir = dirname(packageJsonPath);
+	const rootDir = dirname(packageJsonPath);
 	const contributeGrammars: Grammar[] = packageJson.contributes?.grammars ?? [];
 	const contributeLanguages: Language[] =
 		packageJson.contributes?.languages ?? [];
 
 	grammars.push(
 		...contributeGrammars.map((grammar) => {
-			const path = join(packageDir, grammar.path);
+			const path = join(rootDir, grammar.path);
 
 			return { ...grammar, path };
 		}),
@@ -66,10 +66,14 @@ export async function createGrammarSnapshot(
 	const oniguramaLib = createOniguramaLib();
 	const registry = createTextmateRegistry(grammarsWithContent, oniguramaLib);
 
-	async function snapshot(filename: string, content: string) {
-		const scope = getScope(extname(filename));
+	async function snapshot(path: string) {
+		const scope = getScope(extname(path));
+
+		path = isAbsolute(path) ? path : join(rootDir, path);
+		const content = await readFile(path, "utf-8");
+
 		if (!scope) {
-			throw new Error(`No scope found for ${filename}`);
+			throw new Error(`No scope found for ${path}`);
 		}
 		const lineWithTokens = await getLineWithTokens(registry, scope, content);
 
