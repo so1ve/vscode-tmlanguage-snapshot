@@ -17,8 +17,6 @@ function runSnapshot(dir: string) {
 		const cases = await fg(join(fixturesDir, "cases/**").replace(/\\/g, "/"));
 
 		for (const path of cases) {
-			// eslint-disable-next-line vitest/valid-title
-
 			it(path, async () => {
 				const result = await snapshot(path);
 
