@@ -1,9 +1,7 @@
 import type { IOnigLib, IRawGrammar } from "vscode-textmate";
-import textmate from "vscode-textmate";
+import * as textmate from "vscode-textmate";
 
 import type { Grammar } from "./types";
-
-const { Registry, parseRawGrammar } = textmate;
 
 export function createTextmateRegistry(
 	grammars: { grammar: Grammar; content: string }[],
@@ -13,7 +11,7 @@ export function createTextmateRegistry(
 	const injectionMap = new Map<string, string[]>();
 
 	for (const { grammar, content } of grammars) {
-		const rawGrammar = parseRawGrammar(content, grammar.path);
+		const rawGrammar = textmate.parseRawGrammar(content, grammar.path);
 
 		grammarMap.set(grammar.scopeName || rawGrammar.scopeName, rawGrammar);
 
@@ -28,7 +26,7 @@ export function createTextmateRegistry(
 		}
 	}
 
-	return new Registry({
+	return new textmate.Registry({
 		onigLib,
 		async loadGrammar(scope) {
 			if (grammarMap.has(scope)) {
