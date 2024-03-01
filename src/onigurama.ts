@@ -1,8 +1,12 @@
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
-import * as oniguruma from "vscode-oniguruma";
+import * as _oniguruma from "vscode-oniguruma";
 import type { IOnigLib } from "vscode-textmate";
+
+const oniguruma: typeof _oniguruma = (_oniguruma as any).default
+	? (_oniguruma as any).default
+	: _oniguruma;
 
 export async function createOniguramaLib() {
 	const wasmPath = join(

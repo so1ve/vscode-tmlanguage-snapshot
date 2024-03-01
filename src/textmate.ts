@@ -1,7 +1,11 @@
 import type { IOnigLib, IRawGrammar } from "vscode-textmate";
-import * as textmate from "vscode-textmate";
+import * as _textmate from "vscode-textmate";
 
 import type { Grammar } from "./types";
+
+const textmate: typeof _textmate = (_textmate as any).default
+	? (_textmate as any).default
+	: _textmate;
 
 export function createTextmateRegistry(
 	grammars: { grammar: Grammar; content: string }[],
