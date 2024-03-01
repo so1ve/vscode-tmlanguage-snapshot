@@ -1,11 +1,10 @@
 import { readFile } from "node:fs/promises";
-import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 
-import { OnigScanner, OnigString, loadWASM } from "vscode-oniguruma";
+import oniguruma from "vscode-oniguruma";
 import type { IOnigLib } from "vscode-textmate";
 
-const require = createRequire(import.meta.url);
+const { OnigScanner, OnigString, loadWASM } = oniguruma;
 
 export async function createOniguramaLib() {
 	const wasmPath = join(
