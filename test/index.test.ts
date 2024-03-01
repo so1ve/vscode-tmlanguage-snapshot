@@ -1,4 +1,4 @@
-import { dirname, join } from "node:path";
+import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import fg from "fast-glob";
@@ -17,7 +17,7 @@ function runSnapshot(dir: string) {
 		const cases = await fg(join(fixturesDir, "cases/**").replace(/\\/g, "/"));
 
 		for (const path of cases) {
-			it(path, async () => {
+			it(relative(fixturesDir, path).replace(/\\/g, "/"), async () => {
 				const result = await snapshot(path);
 
 				expect(result).toMatchSnapshot();
