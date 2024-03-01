@@ -68,13 +68,13 @@ export async function createGrammarSnapshot(
 
 	async function snapshot(path: string) {
 		const scope = getScope(extname(path));
-
-		path = isAbsolute(path) ? path : join(rootDir, path);
-		const content = await readFile(path, "utf-8");
-
 		if (!scope) {
 			throw new Error(`No scope found for ${path}`);
 		}
+
+		path = isAbsolute(path) ? path : join(rootDir, path);
+
+		const content = await readFile(path, "utf-8");
 		const lineWithTokens = await getLineWithTokens(registry, scope, content);
 
 		return renderSnapshotFromLineAndTokens(lineWithTokens);

@@ -23,7 +23,7 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(prettier@3.2.4)
   '@types/node':
-    specifier: ^20.8.3
+    specifier: ^20.11.0
     version: 20.11.0
   bumpp:
     specifier: ^9.2.0
@@ -947,8 +947,6 @@ packages:
       eslint: ^8.56.0
       typescript: '*'
     peerDependenciesMeta:
-      eslint:
-        optional: true
       typescript:
         optional: true
     dependencies:
