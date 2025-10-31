@@ -2,7 +2,7 @@ import type { Registry, StateStack } from "vscode-textmate";
 
 import type { LineWithTokens } from "./types";
 
-const newlineRe = /\r?\n/g;
+const newlineRe = /\r?\n/;
 
 export async function getLineWithTokens(
 	registry: Registry,

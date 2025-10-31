@@ -623,15 +623,15 @@
 		"watch": "npm run build -- --watch"
 	},
 	"devDependencies": {
-		"@types/semver": "^7.5.3",
-		"@types/vscode": "^1.82.0",
-		"@volar/vscode": "~2.0.0",
+		"@types/semver": "^7.7.1",
+		"@types/vscode": "^1.105.0",
+		"@volar/vscode": "~2.4.23",
 		"@vue/language-core": "1.8.27",
 		"@vue/language-server": "1.8.27",
 		"esbuild": "latest",
 		"esbuild-plugin-copy": "latest",
 		"esbuild-visualizer": "latest",
-		"semver": "^7.5.4",
+		"semver": "^7.7.3",
 		"typescript-vue-plugin": "1.8.27",
 		"vsce": "latest",
 		"vscode-languageclient": "^9.0.1"
