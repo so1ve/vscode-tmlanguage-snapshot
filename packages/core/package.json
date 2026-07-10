@@ -1,6 +1,6 @@
 {
   "name": "@vscode-tmlanguage-snapshot/core",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Ray <i@mk1.io> (@so1ve)",
   "type": "module",
   "homepage": "https://github.com/so1ve/vscode-tmlanguage-snapshot",

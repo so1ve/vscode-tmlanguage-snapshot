@@ -1,6 +1,6 @@
 {
   "name": "@vscode-tmlanguage-snapshot/vscode",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Ray <i@mk1.io> (@so1ve)",
   "type": "module",
   "description": "Capture TextMate snapshots from a real VS Code Extension Host.",

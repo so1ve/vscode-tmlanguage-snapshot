@@ -1,6 +1,6 @@
 {
   "name": "vscode-tmlanguage-snapshot",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Ray <i@mk1.io> (@so1ve)",
   "type": "module",
   "description": "Take snapshots of your tmLanguage grammar.",
