@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VS Code injection grammar integration > loads the built-in TypeScript host and contributed injection 1`] = `
+">TODO
+#^^^^ source.ts keyword.todo.snapshot
+>"
+`;

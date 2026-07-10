@@ -20,7 +20,8 @@
 					"name": "fenced_code.block.language.markdown"
 				},
 				"5": {
-					"name": "fenced_code.block.language.attributes.markdown"
+					"name": "fenced_code.block.language.attributes.markdown",
+					"patterns": []
 				}
 			},
 			"endCaptures": {
@@ -30,7 +31,7 @@
 			},
 			"patterns": [
 				{
-					"include": "source.vue"
+					"include": "text.html.vue"
 				}
 			]
 		}

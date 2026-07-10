@@ -1,0 +1,37 @@
+{
+  "name": "@vscode-tmlanguage-snapshot/vscode",
+  "version": "1.0.1",
+  "author": "Ray <i@mk1.io> (@so1ve)",
+  "type": "module",
+  "description": "Capture TextMate snapshots from a real VS Code Extension Host.",
+  "homepage": "https://github.com/so1ve/vscode-tmlanguage-snapshot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/so1ve/vscode-tmlanguage-snapshot.git",
+    "directory": "packages/vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/so1ve/vscode-tmlanguage-snapshot/issues"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "watch": "tsdown --watch"
+  },
+  "dependencies": {
+    "@vscode-tmlanguage-snapshot/core": "workspace:"
+  }
+}

@@ -1,16 +1,19 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"lib": ["ESNext"],
-		"module": "ESNext",
-		"moduleResolution": "Bundler",
-		"resolveJsonModule": true,
-		"types": ["vite/client"],
-		"strict": true,
-		"strictNullChecks": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"skipDefaultLibCheck": true,
-		"skipLibCheck": true
-	}
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@vscode-tmlanguage-snapshot/core": ["./packages/core/src/index.ts"],
+      "@vscode-tmlanguage-snapshot/vscode": ["./packages/vscode/src/index.ts"],
+      "vscode-tmlanguage-snapshot": ["./packages/standalone/src/index.ts"]
+    }
+  },
+  "include": ["*.config.ts", "packages/**/*.ts", "test/**/*.ts"],
+  "exclude": ["**/dist", "**/fixtures/**", "**/node_modules"]
 }

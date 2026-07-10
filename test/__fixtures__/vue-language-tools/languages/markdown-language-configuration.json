@@ -24,7 +24,10 @@
 		{
 			"open": "<!--",
 			"close": "-->",
-			"notIn": ["comment", "string"]
+			"notIn": [
+				"comment",
+				"string"
+			]
 		},
 		// javascript
 		// commented to fix https://github.com/vuejs/language-tools/issues/1428
@@ -39,8 +42,15 @@
 		{
 			"open": "/**",
 			"close": " */",
-			"notIn": ["string"]
+			"notIn": [
+				"string"
+			]
 		}
 	],
-	"colorizedBracketPairs": [["{{", "}}"]]
+	"colorizedBracketPairs": [
+		[
+			"{{",
+			"}}"
+		]
+	]
 }
