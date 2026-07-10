@@ -1,1 +1,3 @@
 pnpm-lock.yaml
+packages/vscode/playground/fixtures/
+test/__fixtures__/vue-language-tools/

@@ -1,3 +1,36 @@
-onlyBuiltDependencies:
-  - esbuild
-  - unrs-resolver
+ignoreWorkspaceRootCheck: true
+gitChecks: false
+
+minimumReleaseAgeExclude:
+  - prettier@3.9.5
+
+shellEmulator: true
+
+packages:
+  - packages/*
+  - packages/*/playground
+
+allowBuilds:
+  core-js: false
+  esbuild: true
+  unrs-resolver: true
+
+peerDependencyRules:
+  allowedVersions:
+    "eslint-plugin-solid>eslint": "10"
+
+catalog:
+  "@so1ve/eslint-config": ^4.6.2
+  "@so1ve/prettier-config": ^4.6.2
+  "@types/node": ^24.9.2
+  bumpp: ^11.1.0
+  eslint: ^10.6.0
+  fast-glob: ^3.3.3
+  prettier: ^3.9.5
+  tsdown: ^0.22.4
+  typescript: ~6.0.3
+  vite: ^7.1.12
+  vitest: ^4.1.10
+  vitest-environment-vscode: 0.1.3
+  vscode-oniguruma: ^2.0.1
+  vscode-textmate: ^9.3.2

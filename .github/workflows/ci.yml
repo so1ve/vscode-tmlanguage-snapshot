@@ -2,86 +2,50 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  lint:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup PNPM
-        run: corepack enable
-
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 24.x
           cache: pnpm
-
-      - name: Setup
-        run: npm i -g @antfu/ni
-
-      - name: Install
-        run: nci
-
-      - name: Lint
-        run: nr lint
-
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup PNPM
-        run: corepack enable
-
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 24.x
-          cache: pnpm
-
-      - name: Setup
-        run: npm i -g @antfu/ni
-
-      - name: Install
-        run: nci
-
-      - name: Typecheck
-        run: nr typecheck
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm build
 
   test:
     runs-on: ${{ matrix.os }}
-
     strategy:
-      matrix:
-        node: [22.x, 24.x]
-        os: [ubuntu-latest, windows-latest, macos-latest]
       fail-fast: false
-
+      matrix:
+        node: [24.x, 26.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup PNPM
-        run: corepack enable
-
-      - name: Set node version to ${{ matrix.node }}
-        uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test:unit
 
-      - name: Setup
-        run: npm i -g @antfu/ni
-
-      - name: Install
-        run: nci
-
-      - name: Test
-        run: nr test
+  vscode-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: xvfb-run -a pnpm test:vscode

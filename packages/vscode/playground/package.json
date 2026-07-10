@@ -1,0 +1,25 @@
+{
+  "name": "vscode-tmlanguage-snapshot-injection-test-extension",
+  "displayName": "TextMate Snapshot Injection Test Extension",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "injection.todo.snapshot",
+        "path": "./syntaxes/todo.injection.tmLanguage.json",
+        "injectTo": [
+          "source.ts"
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode-tmlanguage-snapshot/vscode": "workspace:",
+    "vitest": "catalog:"
+  }
+}

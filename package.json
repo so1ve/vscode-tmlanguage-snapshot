@@ -1,86 +1,30 @@
 {
-	"name": "vscode-tmlanguage-snapshot",
-	"version": "1.0.1",
-	"packageManager": "pnpm@10.26.2",
-	"author": "Ray <i@mk1.io> (@so1ve)",
-	"type": "module",
-	"description": "Take snapshots of your tmLanguage grammar.",
-	"keywords": [
-		"grammar",
-		"highlighting",
-		"language",
-		"snapshot",
-		"snapshot",
-		"snapshot-test",
-		"snapshot-tester",
-		"snapshot-testing",
-		"snapshot-tests",
-		"snapshots",
-		"syntax",
-		"test",
-		"testing",
-		"textmate",
-		"tmLanguage",
-		"unit",
-		"vscode"
-	],
-	"homepage": "https://github.com/so1ve/vscode-tmlanguage-snapshot#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/so1ve/vscode-tmlanguage-snapshot.git"
-	},
-	"bugs": {
-		"url": "https://github.com/so1ve/vscode-tmlanguage-snapshot/issues"
-	},
-	"license": "MIT",
-	"sideEffects": false,
-	"exports": {
-		".": "./dist/index.js"
-	},
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"typesVersions": {
-		"*": {
-			"*": [
-				"./dist/*",
-				"./dist/index.d.ts"
-			]
-		}
-	},
-	"files": [
-		"dist"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"build": "tsdown",
-		"lint": "eslint . && prettier . --check",
-		"lint:fix": "eslint . --fix && prettier . --write",
-		"prepublishOnly": "nr build",
-		"release": "bumpp --commit --push --tag && pnpm publish",
-		"test": "vitest",
-		"typecheck": "tsgo --noEmit",
-		"watch": "pkgroll --watch"
-	},
-	"dependencies": {
-		"vscode-oniguruma": "^2.0.1",
-		"vscode-textmate": "^9.2.1"
-	},
-	"devDependencies": {
-		"@antfu/ni": "^27.0.1",
-		"@so1ve/eslint-config": "^3.11.2",
-		"@so1ve/prettier-config": "^3.11.2",
-		"@types/node": "^24.9.2",
-		"@typescript/native-preview": "7.0.0-dev.20251225.1",
-		"bumpp": "^10.3.1",
-		"eslint": "^9.38.0",
-		"fast-glob": "^3.3.3",
-		"prettier": "^3.6.2",
-		"tsdown": "^0.15.12",
-		"tsx": "^4.20.6",
-		"typescript": "^5.9.3",
-		"vite": "^7.1.12",
-		"vitest": "^4.0.5"
-	}
+  "private": true,
+  "packageManager": "pnpm@11.11.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint . && prettier . --check",
+    "lint:fix": "eslint . --fix && prettier . --write",
+    "release": "bumpp packages/*/package.json --commit --push --tag",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:vscode": "vitest run --project vscode",
+    "typecheck": "tsc --noEmit",
+    "watch": "tsdown --watch"
+  },
+  "devDependencies": {
+    "@so1ve/eslint-config": "catalog:",
+    "@so1ve/prettier-config": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "fast-glob": "catalog:",
+    "prettier": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:",
+    "vitest-environment-vscode": "catalog:"
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "scopeName": "injection.todo.snapshot",
+  "injectionSelector": "L:source.ts",
+  "patterns": [
+    {
+      "match": "\\bTODO\\b",
+      "name": "keyword.todo.snapshot"
+    }
+  ]
+}
