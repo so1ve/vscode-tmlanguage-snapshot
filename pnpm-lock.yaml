@@ -26,7 +26,7 @@ catalogs:
       version: 3.3.3
     prettier:
       specifier: ^3.9.5
-      version: 3.9.6
+      version: 3.9.7
     tsdown:
       specifier: ^0.22.4
       version: 0.22.14
@@ -55,10 +55,10 @@ importers:
     devDependencies:
       '@so1ve/eslint-config':
         specifier: 'catalog:'
-        version: 4.7.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@typescript-eslint/eslint-plugin@8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.70.0(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(prettier@3.9.6)(supports-color@9.4.0)(typescript@6.0.3)(vitest@4.1.11(@types/node@24.13.5)(vite@7.3.6(@types/node@24.13.5)(jiti@2.7.0)(yaml@2.9.1)))
+        version: 4.7.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@typescript-eslint/eslint-plugin@8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.70.0(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(prettier@3.9.7)(supports-color@9.4.0)(typescript@6.0.3)(vitest@4.1.11(@types/node@24.13.5)(vite@7.3.6(@types/node@24.13.5)(jiti@2.7.0)(yaml@2.9.1)))
       '@so1ve/prettier-config':
         specifier: 'catalog:'
-        version: 4.7.0(prettier@3.9.6)(supports-color@9.4.0)
+        version: 4.7.0(prettier@3.9.7)(supports-color@9.4.0)
       '@types/node':
         specifier: 'catalog:'
         version: 24.13.5
@@ -73,7 +73,7 @@ importers:
         version: 3.3.3
       prettier:
         specifier: 'catalog:'
-        version: 3.9.6
+        version: 3.9.7
       tsdown:
         specifier: 'catalog:'
         version: 0.22.14(typescript@6.0.3)
@@ -2543,8 +2543,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier@3.9.6:
-    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+  prettier@3.9.7:
+    resolution: {integrity: sha512-T3mF5P7HFzZVLDQuCUNtJj6WK1pcpLMweMNUVwGb01bLNkH9AkKxtZvmInw8K6bnn2O3d6/5RHl6zSHiBAD0Og==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3698,7 +3698,7 @@ snapshots:
 
   '@rviscomi/capo.js@2.3.0': {}
 
-  '@so1ve/eslint-config@4.7.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@typescript-eslint/eslint-plugin@8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.70.0(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(prettier@3.9.6)(supports-color@9.4.0)(typescript@6.0.3)(vitest@4.1.11(@types/node@24.13.5)(vite@7.3.6(@types/node@24.13.5)(jiti@2.7.0)(yaml@2.9.1)))':
+  '@so1ve/eslint-config@4.7.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@typescript-eslint/eslint-plugin@8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.70.0(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(prettier@3.9.7)(supports-color@9.4.0)(typescript@6.0.3)(vitest@4.1.11(@types/node@24.13.5)(vite@7.3.6(@types/node@24.13.5)(jiti@2.7.0)(yaml@2.9.1)))':
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments': 4.8.1(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))
       '@html-eslint/eslint-plugin': 0.65.0(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))
@@ -3739,7 +3739,7 @@ snapshots:
       find-up-simple: 1.0.1
       globals: 17.12.0
       local-pkg: 1.2.1
-      prettier: 3.9.6
+      prettier: 3.9.7
       toml-eslint-parser: 1.0.3
       typescript-eslint: 8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3)
       vue-eslint-parser: 10.4.1(eslint@10.10.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)
@@ -3770,12 +3770,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@so1ve/prettier-config@4.7.0(prettier@3.9.6)(supports-color@9.4.0)':
+  '@so1ve/prettier-config@4.7.0(prettier@3.9.7)(supports-color@9.4.0)':
     dependencies:
-      prettier: 3.9.6
+      prettier: 3.9.7
       prettier-plugin-astro: 0.14.1
-      prettier-plugin-jsdoc: 1.8.1(prettier@3.9.6)(supports-color@9.4.0)
-      prettier-plugin-toml: 2.0.6(prettier@3.9.6)
+      prettier-plugin-jsdoc: 1.8.1(prettier@3.9.7)(supports-color@9.4.0)
+      prettier-plugin-toml: 2.0.6(prettier@3.9.7)
     transitivePeerDependencies:
       - supports-color
 
@@ -5646,24 +5646,24 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.13.1
-      prettier: 3.9.6
+      prettier: 3.9.7
       sass-formatter: 0.7.9
 
-  prettier-plugin-jsdoc@1.8.1(prettier@3.9.6)(supports-color@9.4.0):
+  prettier-plugin-jsdoc@1.8.1(prettier@3.9.7)(supports-color@9.4.0):
     dependencies:
       binary-searching: 2.0.5
       comment-parser: 1.4.9
       mdast-util-from-markdown: 2.0.3(supports-color@9.4.0)
-      prettier: 3.9.6
+      prettier: 3.9.7
     transitivePeerDependencies:
       - supports-color
 
-  prettier-plugin-toml@2.0.6(prettier@3.9.6):
+  prettier-plugin-toml@2.0.6(prettier@3.9.7):
     dependencies:
       '@taplo/lib': 0.5.0
-      prettier: 3.9.6
+      prettier: 3.9.7
 
-  prettier@3.9.6: {}
+  prettier@3.9.7: {}
 
   proc-log@4.2.0: {}
 
