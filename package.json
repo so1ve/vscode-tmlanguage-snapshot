@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@11.28.7",
+  "packageManager": "pnpm@11.28.8",
   "type": "module",
   "scripts": {
     "build": "tsdown",
